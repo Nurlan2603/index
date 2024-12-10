@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма трудоустройства</title>
+</head>
+<body>
+    <header>
+        <h1>Форма трудоустройства</h1>
+        <p>Пожалуйста, заполните форму для рассмотрения вашей кандидатуры.</p>
+    </header>
+
+    <main>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br><br>
+
+            <label for="position">Желаемая должность:</label>
+            <input type="text" id="position" name="position" required>
+            <br><br>
+
+            <label for="resume">Загрузите резюме (в формате PDF):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+            <br><br>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Вопрос</th>
+                        <th>Ваш ответ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Готовы работать полный день?</td>
+                        <td>
+                            <input type="radio" id="overtime_yes" name="overtime" value="yes">
+                            <label for="overtime_yes">Да</label>
+                            <input type="radio" id="overtime_no" name="overtime" value="no">
+                            <label for="overtime_no">Нет</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Есть ли у вас опыт удаленной работы?</td>
+                        <td>
+                            <input type="radio" id="remote_yes" name="remote" value="yes">
+                            <label for="remote_yes">Да</label>
+                            <input type="radio" id="remote_no" name="remote" value="no">
+                            <label for="remote_no">Нет</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Готовы к переездам?</td>
+                        <td>
+                            <input type="radio" id="overtime_yes" name="overtime" value="yes">
+                            <label for="overtime_yes">Да</label>
+                            <input type="radio" id="overtime_no" name="overtime" value="no">
+                            <label for="overtime_no">Нет</label>
+                        </td>
+                    </tr>
+                    <tr>
+                </tbody>
+            </table>
+            <br>
+
+            <!-- Кнопки -->
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024 Все права защищены. Контакты: example@example.com</p>
+    </footer>
+</body>
+</html>
